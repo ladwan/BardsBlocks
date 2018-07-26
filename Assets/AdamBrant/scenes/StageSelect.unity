@@ -627,7 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 528844657}
-  ButtSize: {x: 55, y: 55}
+  ButtSize: {x: 60, y: 60}
 --- !u!114 &528844661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 555719792}
-  ButtSize: {x: 55, y: 55}
+  ButtSize: {x: 60, y: 60}
 --- !u!114 &555719796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,7 +1145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 842583506}
-  ButtSize: {x: 55, y: 55}
+  ButtSize: {x: 60, y: 60}
 --- !u!114 &842583510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1134236647}
-  ButtSize: {x: 55, y: 55}
+  ButtSize: {x: 60, y: 60}
 --- !u!114 &1134236651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2336,7 +2336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 2094416531}
-  ButtSize: {x: 55, y: 55}
+  ButtSize: {x: 60, y: 60}
 --- !u!1 &2113704858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,7 +2493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 2113704861}
-  ButtSize: {x: 55, y: 55}
+  ButtSize: {x: 60, y: 60}
 --- !u!114 &2113704865
 MonoBehaviour:
   m_ObjectHideFlags: 0
