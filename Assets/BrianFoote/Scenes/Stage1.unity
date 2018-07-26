@@ -527,6 +527,18 @@ Prefab:
       propertyPath: currentBlock
       value: 
       objectReference: {fileID: 1362210241}
+    - target: {fileID: 4710240628812374, guid: 40b8ac59ca6441940a004e0d5a920a87, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710240628812374, guid: 40b8ac59ca6441940a004e0d5a920a87, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710240628812374, guid: 40b8ac59ca6441940a004e0d5a920a87, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b8ac59ca6441940a004e0d5a920a87, type: 2}
   m_IsPrefabAsset: 0
