@@ -114,7 +114,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1542271107401520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125.498665, y: 97.94974, z: -45.097393}
+  m_LocalPosition: {x: 4.5626163, y: 3.5408592, z: 2.4281695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4809282125071172}
@@ -202,9 +202,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   northBlock: {fileID: 0}
+  farNorthBlock: {fileID: 0}
   eastBlock: {fileID: 0}
+  farEastBlock: {fileID: 0}
   southBlock: {fileID: 0}
+  farSouthBlock: {fileID: 0}
   westBlock: {fileID: 0}
+  farWestBlock: {fileID: 0}
   isCurrentBlock: 0
   destroyOnJump: 0
   readyToDestroy: 0
@@ -228,9 +232,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   northBlock: {fileID: 0}
+  farNorthBlock: {fileID: 0}
   eastBlock: {fileID: 0}
+  farEastBlock: {fileID: 0}
   southBlock: {fileID: 0}
+  farSouthBlock: {fileID: 0}
   westBlock: {fileID: 0}
+  farWestBlock: {fileID: 0}
   isCurrentBlock: 0
   destroyOnJump: 0
   readyToDestroy: 0
@@ -254,9 +262,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   northBlock: {fileID: 0}
+  farNorthBlock: {fileID: 0}
   eastBlock: {fileID: 0}
+  farEastBlock: {fileID: 0}
   southBlock: {fileID: 0}
+  farSouthBlock: {fileID: 0}
   westBlock: {fileID: 0}
+  farWestBlock: {fileID: 0}
   isCurrentBlock: 0
   destroyOnJump: 0
   readyToDestroy: 0
@@ -287,6 +299,7 @@ MonoBehaviour:
   currentBlockRef: {fileID: 0}
   playerIsSafe: 0
   playerIsDead: 0
+  playerCanWin: 0
   wantTypeBlue: 0
   wantTypeRed: 0
   wantTypeYellow: 0
@@ -305,9 +318,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   northBlock: {fileID: 0}
+  farNorthBlock: {fileID: 0}
   eastBlock: {fileID: 0}
+  farEastBlock: {fileID: 0}
   southBlock: {fileID: 0}
+  farSouthBlock: {fileID: 0}
   westBlock: {fileID: 0}
+  farWestBlock: {fileID: 0}
   isCurrentBlock: 0
   destroyOnJump: 0
   readyToDestroy: 0
@@ -331,9 +348,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   northBlock: {fileID: 0}
+  farNorthBlock: {fileID: 0}
   eastBlock: {fileID: 0}
+  farEastBlock: {fileID: 0}
   southBlock: {fileID: 0}
+  farSouthBlock: {fileID: 0}
   westBlock: {fileID: 0}
+  farWestBlock: {fileID: 0}
   isCurrentBlock: 0
   destroyOnJump: 0
   readyToDestroy: 0

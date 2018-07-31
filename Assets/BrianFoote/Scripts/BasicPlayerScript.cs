@@ -10,6 +10,8 @@ public class BasicPlayerScript : MonoBehaviour {
 
     public float playerScore;
 
+    public bool farJumpActive;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -27,7 +29,7 @@ public class BasicPlayerScript : MonoBehaviour {
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
-			if (Physics.Raycast (ray, out hit, 100.0f)) {
+			if (Physics.Raycast (ray, out hit, 100.0f) && farJumpActive == false) {
 				if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().northBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().eastBlock ||
 					hit.transform == currentBlock.GetComponent<BasicBlockScript>().southBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().westBlock) {
 					Debug.Log (hit.transform.gameObject);
@@ -37,7 +39,19 @@ public class BasicPlayerScript : MonoBehaviour {
 					JumpSpace ();
 				}
 			}
-		}
+            if (Physics.Raycast(ray, out hit, 100.0f) && farJumpActive == true)
+            {
+                if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().farNorthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farEastBlock ||
+                    hit.transform == currentBlock.GetComponent<BasicBlockScript>().farSouthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farWestBlock)
+                {
+                    Debug.Log(hit.transform.gameObject);
+                    currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = false;
+                    currentBlock = hit.transform;
+                    currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
+                    JumpSpace();
+                }
+            }
+        }
 		
 	}
 

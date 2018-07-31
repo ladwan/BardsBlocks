@@ -360,6 +360,11 @@ Prefab:
       propertyPath: currentBlock
       value: 
       objectReference: {fileID: 2073984218}
+    - target: {fileID: 114573117093284624, guid: 40b8ac59ca6441940a004e0d5a920a87,
+        type: 2}
+      propertyPath: farJumpActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b8ac59ca6441940a004e0d5a920a87, type: 2}
   m_IsPrefabAsset: 0

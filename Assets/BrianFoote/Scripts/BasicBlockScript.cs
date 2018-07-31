@@ -5,9 +5,13 @@ using UnityEngine;
 public class BasicBlockScript : MonoBehaviour {
 
 	public Transform northBlock;
+    public Transform farNorthBlock;
 	public Transform eastBlock;
+    public Transform farEastBlock;
 	public Transform southBlock;
+    public Transform farSouthBlock;
 	public Transform westBlock;
+    public Transform farWestBlock;
 
 	public bool isCurrentBlock;
 	public bool destroyOnJump;
