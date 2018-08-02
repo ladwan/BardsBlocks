@@ -27,6 +27,8 @@ public class BasicBlockScript : MonoBehaviour {
     public float scoreValue;
     public GameObject playerRef;
 
+    public bool isProtected;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -38,12 +40,13 @@ public class BasicBlockScript : MonoBehaviour {
         playerRef = GameObject.FindGameObjectWithTag("Player");
 
 
-        if (destroyOnJump == true && isCurrentBlock == true) {
+        if (destroyOnJump == true && isCurrentBlock == true && isProtected == false) {
 			readyToDestroy = true;
 		}
 
-		if (readyToDestroy == true && isCurrentBlock == false) {
+		if (readyToDestroy == true && isCurrentBlock == false && isProtected == false) {
             playerRef.GetComponent<BasicPlayerScript>().playerScore += scoreValue;
+			playerRef.GetComponent<BasicPlayerScript> ().powerUpScore += scoreValue;
 
             Destroy(gameObject);
 		}
