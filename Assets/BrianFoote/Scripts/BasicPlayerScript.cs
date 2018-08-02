@@ -14,11 +14,16 @@ public class BasicPlayerScript : MonoBehaviour {
 
 	public float powerUpScoreThresh;
 
-	public float powerUpUseCount;
+	public float doubleJumpUseCount;
+    public float doubleJumpUseMax;
 
-    public bool canUsePowerUp;
+    public float protectUseCount;
+    public float protectUseMax;
 
-    public bool farJumpActive;
+    public bool canDoubleJump;
+    public bool canProtect;
+
+    //public bool farJumpActive;
 
 	// Use this for initialization
 	void Start () {
@@ -28,20 +33,41 @@ public class BasicPlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (powerUpUseCount >= 1)
+        if (doubleJumpUseCount >= 1)
         {
-            canUsePowerUp = true;
+            canDoubleJump = true;
         }
 
-        if (powerUpUseCount == 0)
+        if (doubleJumpUseCount == 0)
         {
-            canUsePowerUp = false;
+            canDoubleJump = false;
         }
 
-		if (powerUpScore >= powerUpScoreThresh) 
+        if (doubleJumpUseCount > doubleJumpUseMax)
+        {
+            doubleJumpUseCount = doubleJumpUseMax;
+        }
+
+        if (protectUseCount >= 1)
+        {
+            canProtect = true;
+        }
+
+        if (protectUseCount == 0)
+        {
+            canProtect = false;
+        }
+
+        if (protectUseCount > protectUseMax)
+        {
+            protectUseCount = protectUseMax;
+        }
+
+        if (powerUpScore >= powerUpScoreThresh) 
 		{
 			powerUpScore = 0;
-			powerUpUseCount += 1;
+			doubleJumpUseCount += 1;
+            protectUseCount += 1;
 		}
 
         currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
@@ -53,7 +79,7 @@ public class BasicPlayerScript : MonoBehaviour {
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 
-			if (Physics.Raycast (ray, out hit, 100.0f) && farJumpActive == false) {
+			if (Physics.Raycast (ray, out hit, 100.0f)) {
 				if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().northBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().eastBlock ||
 					hit.transform == currentBlock.GetComponent<BasicBlockScript>().southBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().westBlock) {
 					Debug.Log (hit.transform.gameObject);
@@ -77,7 +103,7 @@ public class BasicPlayerScript : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             
-            if (Physics.Raycast(ray, out hit, 100.0f) && canUsePowerUp == true)
+            if (Physics.Raycast(ray, out hit, 100.0f) && canDoubleJump == true)
             {
                 if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().farNorthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farEastBlock ||
                     hit.transform == currentBlock.GetComponent<BasicBlockScript>().farSouthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farWestBlock)
@@ -86,15 +112,34 @@ public class BasicPlayerScript : MonoBehaviour {
                     currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = false;
                     currentBlock = hit.transform;
                     currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
+                    if (currentBlock.GetComponent<BasicBlockScript>().isProtected == true)
+                    {
+                        currentBlock.GetComponent<BasicBlockScript>().isProtected = false;
+                    }
                     JumpSpace();
-                    powerUpUseCount -= 1;
-                    farJumpActive = false;
+                    doubleJumpUseCount -= 1;
+                    //farJumpActive = false;
                 }
 
-                if (hit.transform == currentBlock && canUsePowerUp == true)
+                
+            }
+        }
+
+        if (Input.GetMouseButtonDown(2))
+        {
+
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+            if (Physics.Raycast(ray, out hit, 100.0f) && canProtect == true)
+            {
+                
+
+                if (hit.transform == currentBlock && canProtect == true && currentBlock.GetComponent<BasicBlockScript>().isProtected == false && currentBlock.GetComponent<BasicBlockScript>().destroyOnJump == true)
                 {
                     currentBlock.GetComponent<BasicBlockScript>().isProtected = true;
-                    powerUpUseCount -= 1;
+                    protectUseCount -= 1;
                 }
             }
         }

@@ -150,7 +150,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4878439664584248, guid: a7ac00e10110ae840bc245bc56cf14a1, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1578905018677742, guid: a7ac00e10110ae840bc245bc56cf14a1, type: 2}
       propertyPath: m_IsActive
@@ -323,7 +323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262391553 stripped
 GameObject:
@@ -372,7 +372,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4163035358464908, guid: 6ce0a31907dc0054fae13322b3d0102f, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114404817728069572, guid: 6ce0a31907dc0054fae13322b3d0102f,
         type: 2}
@@ -397,6 +397,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce0a31907dc0054fae13322b3d0102f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &513060880
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1692409620}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 513060881}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &513060881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 1692409620}
+  m_GameObject: {fileID: 513060880}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &741605255
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,7 +489,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &819330048 stripped
 GameObject:
@@ -543,7 +571,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1065995661
 Prefab:
@@ -582,7 +610,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4189123156285238, guid: 40b8ac59ca6441940a004e0d5a920a87, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114573117093284624, guid: 40b8ac59ca6441940a004e0d5a920a87,
         type: 2}
@@ -594,9 +622,42 @@ Prefab:
       propertyPath: farJumpActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114573117093284624, guid: 40b8ac59ca6441940a004e0d5a920a87,
+        type: 2}
+      propertyPath: powerUpScoreThresh
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b8ac59ca6441940a004e0d5a920a87, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1311372938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 2033224201}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311372939}
+  m_Layer: 0
+  m_Name: Missing Prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311372939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 2033224201}
+  m_GameObject: {fileID: 1311372938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1362210241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4116330615559314, guid: a7ac00e10110ae840bc245bc56cf14a1,

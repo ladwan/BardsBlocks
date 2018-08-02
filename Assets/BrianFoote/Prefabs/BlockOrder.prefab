@@ -214,12 +214,19 @@ MonoBehaviour:
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 0
+  blueGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeRed: 0
+  redGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeYellow: 1
+  yellowGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypePurple: 0
+  purpleGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeCyan: 0
+  cyanGlow: {r: 0, g: 0, b: 0, a: 0}
   scoreValue: 0
   playerRef: {fileID: 0}
+  isProtected: 0
+  defaultGlow: {fileID: 0}
 --- !u!114 &114149883406519384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -244,12 +251,19 @@ MonoBehaviour:
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 0
+  blueGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeRed: 0
+  redGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeYellow: 0
+  yellowGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypePurple: 1
+  purpleGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeCyan: 0
+  cyanGlow: {r: 0, g: 0, b: 0, a: 0}
   scoreValue: 0
   playerRef: {fileID: 0}
+  isProtected: 0
+  defaultGlow: {fileID: 0}
 --- !u!114 &114223142328606194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -274,12 +288,19 @@ MonoBehaviour:
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 1
+  blueGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeRed: 0
+  redGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeYellow: 0
+  yellowGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypePurple: 0
+  purpleGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeCyan: 0
+  cyanGlow: {r: 0, g: 0, b: 0, a: 0}
   scoreValue: 0
   playerRef: {fileID: 0}
+  isProtected: 0
+  defaultGlow: {fileID: 0}
 --- !u!114 &114404817728069572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,12 +351,19 @@ MonoBehaviour:
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 0
+  blueGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeRed: 1
+  redGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeYellow: 0
+  yellowGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypePurple: 0
+  purpleGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeCyan: 0
+  cyanGlow: {r: 0, g: 0, b: 0, a: 0}
   scoreValue: 0
   playerRef: {fileID: 0}
+  isProtected: 0
+  defaultGlow: {fileID: 0}
 --- !u!114 &114741896670906170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -360,9 +388,16 @@ MonoBehaviour:
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 0
+  blueGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeRed: 0
+  redGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeYellow: 0
+  yellowGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypePurple: 0
+  purpleGlow: {r: 0, g: 0, b: 0, a: 0}
   isBlockTypeCyan: 1
+  cyanGlow: {r: 0, g: 0, b: 0, a: 0}
   scoreValue: 0
   playerRef: {fileID: 0}
+  isProtected: 0
+  defaultGlow: {fileID: 0}
