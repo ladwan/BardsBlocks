@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1170485528119370
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1261399361247572
 GameObject:
   m_ObjectHideFlags: 1
@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 65327517149524092}
   - component: {fileID: 23473520836623754}
   - component: {fileID: 114970941179325922}
+  - component: {fileID: 95181317575880382}
   m_Layer: 0
   m_Name: Block-A1
   m_TagString: Untagged
@@ -205,6 +206,7 @@ GameObject:
   - component: {fileID: 65020518174300190}
   - component: {fileID: 23511522796414716}
   - component: {fileID: 114112269664582282}
+  - component: {fileID: 95651978710690320}
   m_Layer: 0
   m_Name: Block-C3
   m_TagString: Untagged
@@ -224,6 +226,7 @@ GameObject:
   - component: {fileID: 65868680526334288}
   - component: {fileID: 23817030665788060}
   - component: {fileID: 114452741039339636}
+  - component: {fileID: 95585031885112756}
   m_Layer: 0
   m_Name: Block-A3
   m_TagString: Untagged
@@ -262,6 +265,7 @@ GameObject:
   - component: {fileID: 65152676764519376}
   - component: {fileID: 23112950436962102}
   - component: {fileID: 114684355738905416}
+  - component: {fileID: 95266960903944172}
   m_Layer: 0
   m_Name: Block-B1
   m_TagString: Untagged
@@ -287,7 +291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1461937650852366
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,7 +306,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1463584604865928
 GameObject:
   m_ObjectHideFlags: 1
@@ -378,7 +382,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1508258891758300
 GameObject:
   m_ObjectHideFlags: 1
@@ -397,7 +401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1522674177742534
 GameObject:
   m_ObjectHideFlags: 1
@@ -416,7 +420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1522677050704792
 GameObject:
   m_ObjectHideFlags: 1
@@ -435,7 +439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1533478557321790
 GameObject:
   m_ObjectHideFlags: 1
@@ -448,6 +452,7 @@ GameObject:
   - component: {fileID: 65731581567039578}
   - component: {fileID: 23699884064497500}
   - component: {fileID: 114243148227892788}
+  - component: {fileID: 95210613332438726}
   m_Layer: 0
   m_Name: Block-A2
   m_TagString: Untagged
@@ -492,7 +497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1552841845820208
 GameObject:
   m_ObjectHideFlags: 1
@@ -526,7 +531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1558509445510412
 GameObject:
   m_ObjectHideFlags: 1
@@ -560,7 +565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1580961022506324
 GameObject:
   m_ObjectHideFlags: 1
@@ -579,7 +584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1617748276273130
 GameObject:
   m_ObjectHideFlags: 1
@@ -592,6 +597,7 @@ GameObject:
   - component: {fileID: 65875175079545382}
   - component: {fileID: 23535417768546456}
   - component: {fileID: 114981238552173612}
+  - component: {fileID: 95628640201287384}
   m_Layer: 0
   m_Name: Block-B3
   m_TagString: Untagged
@@ -1906,7 +1912,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: eb6c515551bb53042838e6751d681fea, type: 2}
+  - {fileID: 2100000, guid: 3858362bc5e6d41418b0e321f54c1660, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2011,7 +2017,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 42796476b480714449e96d4e58cedb75, type: 2}
+  - {fileID: 2100000, guid: 9098fbffd2d7e11428023c971c94d423, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2326,7 +2332,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ba7a2600476b9e047832330daa020a81, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2466,7 +2472,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 42796476b480714449e96d4e58cedb75, type: 2}
+  - {fileID: 2100000, guid: 223c953dbffe01145a2f51c769e255ba, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3345,6 +3351,114 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &95181317575880382
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1287414612813886}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d310a343017e854b81c4b27855d32de, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95210613332438726
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1533478557321790}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a27d5d9c9733604b9a7d44845fbbfc0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95266960903944172
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393336566814666}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 31257a56ef491eb49954655da718d007, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95585031885112756
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360477190341158}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95628640201287384
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1617748276273130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f30d0c0366d075a4b87b7354aaa44b2e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95651978710690320
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1358644862770578}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ddda86cbd1052824eb1389d4cc89d8a6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114022945694889678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3439,7 +3553,7 @@ MonoBehaviour:
   southBlock: {fileID: 4361634439500892}
   westBlock: {fileID: 4796397174177074}
   isCurrentBlock: 0
-  destroyOnJump: 1
+  destroyOnJump: 0
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 0
@@ -3751,11 +3865,11 @@ MonoBehaviour:
   southBlock: {fileID: 4980554050714936}
   westBlock: {fileID: 4019985397299082}
   isCurrentBlock: 0
-  destroyOnJump: 1
+  destroyOnJump: 0
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 0
-  isBlockTypeRed: 0
+  isBlockTypeRed: 1
   isBlockTypeYellow: 0
   isBlockTypePurple: 0
   isBlockTypeCyan: 0
@@ -4192,11 +4306,11 @@ MonoBehaviour:
   eastBlock: {fileID: 4116330615559314}
   southBlock: {fileID: 4664352300940404}
   westBlock: {fileID: 0}
-  isCurrentBlock: 1
-  destroyOnJump: 1
+  isCurrentBlock: 0
+  destroyOnJump: 0
   readyToDestroy: 0
   isAdjacentBlock: 0
-  isBlockTypeBlue: 0
+  isBlockTypeBlue: 1
   isBlockTypeRed: 0
   isBlockTypeYellow: 0
   isBlockTypePurple: 0
@@ -4271,12 +4385,12 @@ MonoBehaviour:
   southBlock: {fileID: 4116330615559314}
   westBlock: {fileID: 4201969200212296}
   isCurrentBlock: 0
-  destroyOnJump: 1
+  destroyOnJump: 0
   readyToDestroy: 0
   isAdjacentBlock: 0
   isBlockTypeBlue: 0
   isBlockTypeRed: 0
-  isBlockTypeYellow: 0
+  isBlockTypeYellow: 1
   isBlockTypePurple: 0
   isBlockTypeCyan: 0
   scoreValue: 500
