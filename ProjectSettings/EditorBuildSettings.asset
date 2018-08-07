@@ -6,30 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/BrianFoote/TestPrefsScene1.unity
+    guid: 406ae0c00bd33f746b586b952ed8ad0c
+  - enabled: 1
+    path: Assets/BrianFoote/TestPrefsScene2.unity
+    guid: f7bcc21afda04714c841b25cfd2c2969
+  - enabled: 0
     path: Assets/AdamBrant/scenes/StartMenu.unity
     guid: 1943ca527049cb544a028aa394429b68
-  - enabled: 1
+  - enabled: 0
     path: Assets/AdamBrant/scenes/TheGame.unity
     guid: f2d70835f346009448df81f725afb1d2
-  - enabled: 1
+  - enabled: 0
     path: Assets/AdamBrant/scenes/StageSelect.unity
     guid: c535ea965833c7d4a81b7ab7876848f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/AdamBrant/scenes/Settings.unity
     guid: 7710293d34b0b1641aff32b28e1a6bdf
-  - enabled: 1
+  - enabled: 0
     path: Assets/BrianFoote/Scenes/Stage1.unity
     guid: e420c4575e47b4146b3bf5f3657ba10f
-  - enabled: 1
+  - enabled: 0
     path: Assets/BrianFoote/Scenes/Stage2.unity
     guid: 9f7616bf96e17c54299b4d526da3da0f
-  - enabled: 1
+  - enabled: 0
     path: Assets/BrianFoote/Scenes/Stage3.unity
     guid: f5c14167dda60aa4db936bc38788919f
-  - enabled: 1
+  - enabled: 0
     path: Assets/BrianFoote/Scenes/TestScene1.unity
     guid: 5b82190df1c275944922595b96e3e16c
-  - enabled: 1
+  - enabled: 0
     path: Assets/AdamBrant/scenes/Help.unity
     guid: 45b808004e263b94495e90cf9caf2eda
   m_configObjects: {}

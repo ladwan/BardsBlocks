@@ -151,4 +151,6 @@ public class BasicPlayerScript : MonoBehaviour {
 			FindObjectOfType<BlockOrderScript> ().playerIsSafe = false;
 		}
 	}
+
+    
 }
