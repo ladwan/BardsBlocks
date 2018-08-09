@@ -8,7 +8,6 @@ public class BasicBlockScript : MonoBehaviour {
 	public Transform eastBlock;
 	public Transform southBlock;
 	public Transform westBlock;
-  
 
 	public bool isCurrentBlock;
 	public bool destroyOnJump;
@@ -26,7 +25,7 @@ public class BasicBlockScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
@@ -37,7 +36,6 @@ public class BasicBlockScript : MonoBehaviour {
 
         if (destroyOnJump == true && isCurrentBlock == true) {
 			readyToDestroy = true;
-
 		}
 
 		if (readyToDestroy == true && isCurrentBlock == false) {
