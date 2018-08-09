@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadingScreenScript : MonoBehaviour {
+    public int scencetoload;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class LoadingScreenScript : MonoBehaviour {
     IEnumerator Load()
     {
         yield return new WaitForSecondsRealtime(2);
-        
+        SceneManager.LoadScene(scencetoload);
 
     }
 

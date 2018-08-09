@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/AdamBrant/scenes/Help.unity
     guid: 45b808004e263b94495e90cf9caf2eda
+  - enabled: 1
+    path: Assets/BrianFoote/Scenes/LoadingScene.unity
+    guid: d9d717427bb9ab949a959abe9882c3e8
   m_configObjects: {}
