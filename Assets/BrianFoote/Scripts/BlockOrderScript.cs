@@ -71,9 +71,10 @@ public class BlockOrderScript : MonoBehaviour {
                 perfectText.SetActive(true);
                 //playerRef.GetComponent<BasicPlayerScript>().doubleJumpUseCount += 1;
                 //playerRef.GetComponent<BasicPlayerScript>().protectUseCount += 1;
-                playerRef.GetComponent<BasicPlayerScript>().IncreasePowerUps();
                 playerCanWin = false;
-			}
+                playerRef.GetComponent<BasicPlayerScript>().RandomInt();
+
+            }
             playerCanWin = false;
 		}
 

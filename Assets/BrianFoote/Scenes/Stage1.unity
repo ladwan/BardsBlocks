@@ -441,6 +441,21 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114004150130916648, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: oneStarThresh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004150130916648, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: twoStarThresh
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114004150130916648, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: threeStarThresh
+      value: 2500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
   m_IsPrefabAsset: 0

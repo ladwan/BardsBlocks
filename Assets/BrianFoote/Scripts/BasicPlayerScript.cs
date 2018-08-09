@@ -164,29 +164,47 @@ public class BasicPlayerScript : MonoBehaviour {
 		}
 	}
 
-    public void IncreasePowerUps()
+    public void RandomInt()
     {
-        doubleJumpUseCount += 1;
-        protectUseCount += 1;
+        powerUpPickNumber = Random.Range(1, 3);
+        if (powerUpPickNumber == 1)
+        {
+            IncreaseDoubleJump();
+        }
+        if (powerUpPickNumber == 2)
+        {
+            IncreaseProtect();
+        }
+    }
 
-        //powerUpPickNumber = Random.Range(1, 2);
+    public void IncreaseDoubleJump()
+    {
+        //doubleJumpUseCount += 1;
+        //protectUseCount += 1;
 
-        //if (powerUpPickNumber == 1 && doubleJumpUseCount < doubleJumpUseMax)
-        //{
-        //   doubleJumpUseCount += 1;
-        //}
-        //if (powerUpPickNumber == 1 && doubleJumpUseCount == doubleJumpUseMax)
-        //{
-        //    protectUseCount += 1;
-        //}
-        //if (powerUpPickNumber == 2 && protectUseCount < protectUseMax)
-        //{
-        //    protectUseCount += 1;
-        //}
-        //if (powerUpPickNumber == 2 && protectUseCount == protectUseMax)
-        //{
-        //    doubleJumpUseCount += 1;
-        //}
+        if (powerUpPickNumber == 1 && doubleJumpUseCount == doubleJumpUseMax)
+        {
+            protectUseCount += 1;
+        }
+        if (powerUpPickNumber == 1 && doubleJumpUseCount < doubleJumpUseMax)
+        {
+           doubleJumpUseCount += 1;
+        }
+        
+
+        
+    }
+    public void IncreaseProtect()
+    {
+        if (powerUpPickNumber == 2 && protectUseCount == protectUseMax)
+        {
+            doubleJumpUseCount += 1;
+        }
+        if (powerUpPickNumber == 2 && protectUseCount < protectUseMax)
+        {
+            protectUseCount += 1;
+        }
+        
     }
 
 
