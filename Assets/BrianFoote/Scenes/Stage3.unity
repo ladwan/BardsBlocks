@@ -359,6 +359,117 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1773690229720134, guid: 6ce0a31907dc0054fae13322b3d0102f,
     type: 2}
   m_PrefabInternal: {fileID: 2020672340}
+--- !u!1001 &851091114
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114001651823642212, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: songOrder.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 224130510319430306, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.2965698
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5.7140074
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.9589882
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277162305154478, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001651823642212, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: noteMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001651823642212, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: songOrder.Array.data[0]
+      value: 
+      objectReference: {fileID: 851091115}
+    - target: {fileID: 114001651823642212, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: songOrder.Array.data[1]
+      value: 
+      objectReference: {fileID: 851091116}
+    - target: {fileID: 114001651823642212, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: songOrder.Array.data[2]
+      value: 
+      objectReference: {fileID: 851091118}
+    - target: {fileID: 114001651823642212, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: songOrder.Array.data[3]
+      value: 
+      objectReference: {fileID: 851091119}
+    - target: {fileID: 114001651823642212, guid: 11a663358391a5940aaf3f6de6cf646c,
+        type: 2}
+      propertyPath: songOrder.Array.data[4]
+      value: 
+      objectReference: {fileID: 851091117}
+    - target: {fileID: 1009665723195912, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11a663358391a5940aaf3f6de6cf646c, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &851091115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1817201140175560, guid: 11a663358391a5940aaf3f6de6cf646c,
+    type: 2}
+  m_PrefabInternal: {fileID: 851091114}
+--- !u!1 &851091116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1888900969815926, guid: 11a663358391a5940aaf3f6de6cf646c,
+    type: 2}
+  m_PrefabInternal: {fileID: 851091114}
+--- !u!1 &851091117 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1715989774671110, guid: 11a663358391a5940aaf3f6de6cf646c,
+    type: 2}
+  m_PrefabInternal: {fileID: 851091114}
+--- !u!1 &851091118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1637235468320568, guid: 11a663358391a5940aaf3f6de6cf646c,
+    type: 2}
+  m_PrefabInternal: {fileID: 851091114}
+--- !u!1 &851091119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1227168550816710, guid: 11a663358391a5940aaf3f6de6cf646c,
+    type: 2}
+  m_PrefabInternal: {fileID: 851091114}
 --- !u!1001 &874143487
 Prefab:
   m_ObjectHideFlags: 0
@@ -892,6 +1003,10 @@ Prefab:
       propertyPath: songOrder.Array.data[4]
       value: 
       objectReference: {fileID: 1166831445}
+    - target: {fileID: 1542271107401520, guid: 6ce0a31907dc0054fae13322b3d0102f, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ce0a31907dc0054fae13322b3d0102f, type: 2}
   m_IsPrefabAsset: 0

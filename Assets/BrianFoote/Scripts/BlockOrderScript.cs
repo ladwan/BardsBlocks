@@ -16,6 +16,7 @@ public class BlockOrderScript : MonoBehaviour {
 	public bool playerIsSafe;
     public bool playerIsDead;
     public bool playerCanWin;
+	public bool playerWins;
 
 	public bool wantTypeBlue;
 	public bool wantTypeRed;
@@ -24,9 +25,20 @@ public class BlockOrderScript : MonoBehaviour {
     public bool wantTypeCyan;
     public Text currentColor;
 
+	public GameObject gameDataReference;
+	public GameObject stageReference;
+
+    public GameObject endScreen;
+    public GameObject perfectText;
 	// Use this for initialization
 	void Start () {
+        endScreen.SetActive(false);
+        perfectText.SetActive(false);
+
         playerCanWin = true;
+
+		gameDataReference = GameObject.FindGameObjectWithTag ("GameDataReference");
+		stageReference = GameObject.FindGameObjectWithTag ("StageReference");
 
 		noteNumber = 0;
 //		nextNote = songOrder[noteNumber];
@@ -52,11 +64,22 @@ public class BlockOrderScript : MonoBehaviour {
 		nextNote = songOrder[noteNumber];
 		if (noteNumber == noteMax && playerCanWin == true) {
 			Debug.Log ("Player wins!");
+			playerWins = true;
+            endScreen.SetActive(true);
+			if (stageReference.GetComponent<GameRefScript> ().threeStar == true) {
+				Debug.Log ("Player got three stars!");
+                perfectText.SetActive(true);
+                //playerRef.GetComponent<BasicPlayerScript>().doubleJumpUseCount += 1;
+                //playerRef.GetComponent<BasicPlayerScript>().protectUseCount += 1;
+                playerRef.GetComponent<BasicPlayerScript>().IncreasePowerUps();
+                playerCanWin = false;
+			}
+            playerCanWin = false;
 		}
 
 
 		if (playerRef.GetComponent<BasicPlayerScript> ().currentBlock.GetComponent<BasicBlockScript> ().isBlockTypeBlue && wantTypeBlue == true && playerIsSafe == false) {
-			Debug.Log ("Player on blue");
+//			Debug.Log ("Player on blue");
             Debug.Log (noteNumber);
 
             wantTypeBlue = false;
@@ -64,11 +87,11 @@ public class BlockOrderScript : MonoBehaviour {
 			IncreaseNoteValue();
 		}
 		if (playerRef.GetComponent<BasicPlayerScript> ().currentBlock.GetComponent<BasicBlockScript> ().isBlockTypeBlue && wantTypeBlue == false && playerIsSafe == false) {
-			Debug.Log ("Player is Dead");
+//			Debug.Log ("Player is Dead");
             playerIsDead = true;
 		}
 		if (playerRef.GetComponent<BasicPlayerScript> ().currentBlock.GetComponent<BasicBlockScript> ().isBlockTypeRed && wantTypeRed == true && playerIsSafe == false) {
-			Debug.Log ("Player on red");
+//			Debug.Log ("Player on red");
             Debug.Log (noteNumber);
 
             wantTypeRed = false;
@@ -77,12 +100,12 @@ public class BlockOrderScript : MonoBehaviour {
 
 		}
 		if (playerRef.GetComponent<BasicPlayerScript> ().currentBlock.GetComponent<BasicBlockScript> ().isBlockTypeRed && wantTypeRed == false && playerIsSafe == false) {
-			Debug.Log ("Player is Dead");
+//			Debug.Log ("Player is Dead");
             playerIsDead = true;
 
         }
         if (playerRef.GetComponent<BasicPlayerScript> ().currentBlock.GetComponent<BasicBlockScript> ().isBlockTypeYellow && wantTypeYellow == true && playerIsSafe == false) {
-			Debug.Log ("Player on yellow");
+//			Debug.Log ("Player on yellow");
             Debug.Log(noteNumber);
 
             wantTypeYellow = false;
@@ -96,7 +119,7 @@ public class BlockOrderScript : MonoBehaviour {
 
         }
         if (playerRef.GetComponent<BasicPlayerScript> ().currentBlock.GetComponent<BasicBlockScript> ().isBlockTypePurple && wantTypePurple == true && playerIsSafe == false) {
-			Debug.Log ("Player on purple");
+//			Debug.Log ("Player on purple");
             Debug.Log(noteNumber);
 
             wantTypePurple = false;
@@ -111,7 +134,7 @@ public class BlockOrderScript : MonoBehaviour {
         }
         if (playerRef.GetComponent<BasicPlayerScript>().currentBlock.GetComponent<BasicBlockScript>().isBlockTypeCyan && wantTypeCyan == true && playerIsSafe == false)
         {
-            Debug.Log("Player on cyan");
+//            Debug.Log("Player on cyan");
             Debug.Log(noteNumber);
 
             wantTypeCyan = false;
@@ -121,7 +144,7 @@ public class BlockOrderScript : MonoBehaviour {
         }
         if (playerRef.GetComponent<BasicPlayerScript>().currentBlock.GetComponent<BasicBlockScript>().isBlockTypePurple && wantTypePurple == false && playerIsSafe == false)
         {
-            Debug.Log("Player is Dead");
+//            Debug.Log("Player is Dead");
             playerIsDead = true;
 
         }

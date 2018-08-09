@@ -55,7 +55,7 @@ public class BasicBlockScript : MonoBehaviour {
         }
 
         playerRef = GameObject.FindGameObjectWithTag("Player");
-        //stageRef = GameObject.FindObjectOfType<GameRefScript>();
+        stageRef = GameObject.FindGameObjectWithTag("StageReference");
 
 
         if (destroyOnJump == true && isCurrentBlock == true && isProtected == false) {

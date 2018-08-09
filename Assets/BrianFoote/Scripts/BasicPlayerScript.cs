@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BasicPlayerScript : MonoBehaviour {
 
+	public GameObject scoreReference;
+
 	public Transform currentBlock;
 
 	public GameObject camHolder;
@@ -20,8 +22,12 @@ public class BasicPlayerScript : MonoBehaviour {
     public float protectUseCount;
     public float protectUseMax;
 
+    public int powerUpPickNumber;
+
     public bool canDoubleJump;
+    public GameObject canDoubleJumpMark;
     public bool canProtect;
+    public GameObject canProtectMark;
 
     //public bool farJumpActive;
 
@@ -33,14 +39,18 @@ public class BasicPlayerScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+//		scoreReference = GameObject.FindGameObjectWithTag ("ScoreReference");
+
         if (doubleJumpUseCount >= 1)
         {
             canDoubleJump = true;
+            canDoubleJumpMark.SetActive(true);
         }
 
         if (doubleJumpUseCount == 0)
         {
             canDoubleJump = false;
+            canDoubleJumpMark.SetActive(false);
         }
 
         if (doubleJumpUseCount > doubleJumpUseMax)
@@ -51,24 +61,26 @@ public class BasicPlayerScript : MonoBehaviour {
         if (protectUseCount >= 1)
         {
             canProtect = true;
+            canProtectMark.SetActive(true);
         }
 
         if (protectUseCount == 0)
         {
             canProtect = false;
+            canProtectMark.SetActive(false);
         }
 
         if (protectUseCount > protectUseMax)
         {
             protectUseCount = protectUseMax;
         }
-
-        if (powerUpScore >= powerUpScoreThresh) 
-		{
-			powerUpScore = 0;
-			doubleJumpUseCount += 1;
-            protectUseCount += 1;
-		}
+//
+//        if (powerUpScore >= powerUpScoreThresh) 
+//		{
+//			powerUpScore = 0;
+//			doubleJumpUseCount += 1;
+//            protectUseCount += 1;
+//		}
 
         currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
 
@@ -82,7 +94,7 @@ public class BasicPlayerScript : MonoBehaviour {
 			if (Physics.Raycast (ray, out hit, 100.0f)) {
 				if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().northBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().eastBlock ||
 					hit.transform == currentBlock.GetComponent<BasicBlockScript>().southBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().westBlock) {
-					Debug.Log (hit.transform.gameObject);
+//					Debug.Log (hit.transform.gameObject);
                     currentBlock.GetComponent<BasicBlockScript> ().isCurrentBlock = false;
 					currentBlock = hit.transform;
 					currentBlock.GetComponent<BasicBlockScript> ().isCurrentBlock = true;
@@ -108,7 +120,7 @@ public class BasicPlayerScript : MonoBehaviour {
                 if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().farNorthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farEastBlock ||
                     hit.transform == currentBlock.GetComponent<BasicBlockScript>().farSouthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farWestBlock)
                 {
-                    Debug.Log(hit.transform.gameObject);
+//                    Debug.Log(hit.transform.gameObject);
                     currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = false;
                     currentBlock = hit.transform;
                     currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
@@ -152,5 +164,30 @@ public class BasicPlayerScript : MonoBehaviour {
 		}
 	}
 
-    
+    public void IncreasePowerUps()
+    {
+        doubleJumpUseCount += 1;
+        protectUseCount += 1;
+
+        //powerUpPickNumber = Random.Range(1, 2);
+
+        //if (powerUpPickNumber == 1 && doubleJumpUseCount < doubleJumpUseMax)
+        //{
+        //   doubleJumpUseCount += 1;
+        //}
+        //if (powerUpPickNumber == 1 && doubleJumpUseCount == doubleJumpUseMax)
+        //{
+        //    protectUseCount += 1;
+        //}
+        //if (powerUpPickNumber == 2 && protectUseCount < protectUseMax)
+        //{
+        //    protectUseCount += 1;
+        //}
+        //if (powerUpPickNumber == 2 && protectUseCount == protectUseMax)
+        //{
+        //    doubleJumpUseCount += 1;
+        //}
+    }
+
+
 }
