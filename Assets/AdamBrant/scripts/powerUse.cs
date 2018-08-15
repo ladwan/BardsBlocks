@@ -39,10 +39,12 @@ public class powerUse : MonoBehaviour {
         if (power1.activeSelf)
         {
             power1.SetActive(false);
+            Debug.Log("power1 now inactive");
         }
         else
         {
             power1.SetActive(true);
+            Debug.Log("power1 now active");
         }
     }
     public void toggleActive2()
@@ -50,10 +52,24 @@ public class powerUse : MonoBehaviour {
         if (power2.activeSelf)
         {
             power2.SetActive(false);
+            Debug.Log("power2 now inactive");
         }
         else
         {
             power2.SetActive(true);
+            Debug.Log("power2 now active");
         }
+    }
+ 
+    public void deactivatePotion()
+    {
+        StartCoroutine(turnoff());
+    }
+
+    IEnumerator turnoff()
+    {
+        yield return new WaitForSeconds(0.25f);
+        power1.SetActive(false);
+        power2.SetActive(false);
     }
 }

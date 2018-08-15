@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UiFade : MonoBehaviour
 {
-
+    public GameObject fadeui;
     Animator Fade;
 
     private void Start()
@@ -14,17 +14,20 @@ public class UiFade : MonoBehaviour
     }
 
 
-    public void OnMouseEnter()
+    public void toggleUI()
     {
-        Debug.Log("mouse over canvas, showing ui!");
-        Fade.SetTrigger("pointer on icons");
-        Fade.SetBool("is using", true);
-    }
-
-    public void OnMouseExit()
-    {
-        Debug.Log("mouse not on ui, fading away!");
-        Fade.SetTrigger("pointer on icons");
-        Fade.SetBool("is using", false);
+        if(fadeui.activeSelf)
+        {
+            Debug.Log("fading away!");
+            Fade.SetTrigger("pointer on icons");
+            Fade.SetBool("is using", false);
+        }
+        else
+        {
+            Debug.Log("showing ui!");
+            Fade.SetTrigger("pointer on icons");
+            Fade.SetBool("is using", true);
+        }
+        
     }
 }
