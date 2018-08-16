@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class sceneloader : MonoBehaviour {
 
     public Scene Stage;
-    public int SceneToLoad;
 
     public void StageSelect()
     {
@@ -25,7 +24,7 @@ public class sceneloader : MonoBehaviour {
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(SceneToLoad, LoadSceneMode.Single);
+        SceneManager.LoadScene("StartMenu", LoadSceneMode.Single);
     }
 
     public void QuitGame()
