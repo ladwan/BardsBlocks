@@ -19,15 +19,24 @@ public class UiFade : MonoBehaviour
         if(fadeui.activeSelf)
         {
             Debug.Log("fading away!");
-            Fade.SetTrigger("pointer on icons");
-            Fade.SetBool("is using", false);
+            Fade.SetTrigger("animate fade");
+            deactivateUI();
         }
         else
         {
             Debug.Log("showing ui!");
-            Fade.SetTrigger("pointer on icons");
-            Fade.SetBool("is using", true);
+            Fade.SetTrigger("animate fade");
         }
         
+    }
+
+    public void deactivateUI()
+    {
+        StartCoroutine(turnoff());
+    }
+
+    IEnumerator turnoff()
+    {
+        yield return new WaitForSeconds(0.25f);
     }
 }

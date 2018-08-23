@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class scrollButton : MonoBehaviour
 {
-
+    Animator fade;
     Animator Scrollbottom;
     Animator Scrollbody;
     public GameObject fadeui;
@@ -15,6 +15,7 @@ public class scrollButton : MonoBehaviour
 
     private void Start()
     {
+        fade = fadeui.GetComponent<Animator>();
         Scrollbottom = scrollbottom.GetComponent<Animator>();
         Scrollbody = scrollbody.GetComponent<Animator>();
         fadeui.SetActive(false);
@@ -34,13 +35,30 @@ public class scrollButton : MonoBehaviour
     }
     public void toggleActive()
     {
-        if (fadeui.activeSelf)
+        fade.SetBool("Activated", !fade.GetBool("Activated"));
+
+        /* (fadeui.activeSelf & fade.GetBool("is open"))
         {
+            fade.SetBool("fadeout", true);
+            fade.SetBool("is open", false);
+            deactivateUI();
             fadeui.SetActive(false);
         }
         else
         {
             fadeui.SetActive(true);
-        }
+            fade.SetBool("is open", true);
+            fade.SetBool("fadeout", false);
+            fade.SetTrigger("animate fade");
+        }*/
+    }
+    public void deactivateUI()
+    {
+        StartCoroutine(turnoff());
+    }
+
+    IEnumerator turnoff()
+    {
+        yield return new WaitForSeconds(1.0f);
     }
 }
