@@ -39,35 +39,43 @@ public class RuneScript : MonoBehaviour {
         Rune2.GetComponent<Button>().enabled = false;
         yield return new WaitForSeconds(1);
         Rune1.GetComponent<Button>().enabled = false;
+        StartCoroutine(RuneCollectionCheck());
 
+    }
 
+    IEnumerator RuneCollectionCheck()
+    {
+        yield return new WaitForSeconds(1);
+        if (RunesCollected == 0 && gameObject.transform == WaterRune.transform)
+        {
+            Rune5.GetComponent<Button>().enabled = true;
+            RunesCollected++;
+        }
+        if (RunesCollected == 1 && gameObject.transform == FireRune.transform)
+        {
+            Rune5.GetComponent<Button>().enabled = true;
+            RunesCollected++;
+        }
 
-
+        if (RunesCollected == 2 && gameObject.transform == AirRune.transform)
+        {
+            Rune5.GetComponent<Button>().enabled = true;
+            RunesCollected = 0;
+            CurrentStage = 2;
+        }
     }
     // Update is called once per frame
     void Update () {
 
-
-            if (RunesCollected == 0 && gameObject.transform != WaterRune.transform)
-            {
-                Rune5.GetComponent<Button>().enabled = true;
-                RunesCollected++;
-            }
+        if (gameObject.transform.hasChanged)
+        {
+            StartCoroutine(RuneCollectionCheck());
+        }
 
 
 
-            if (RunesCollected == 1 && gameObject.transform == FireRune.transform)
-            {
-                Rune5.GetComponent<Button>().enabled = true;
-                RunesCollected++;
-            }
 
-            if (RunesCollected == 2 && gameObject.transform == AirRune.transform)
-            {
-                Rune5.GetComponent<Button>().enabled = true;
-                RunesCollected = 0;
-                CurrentStage = 2;
-            }
+
         
 
     }
