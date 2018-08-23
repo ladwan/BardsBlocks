@@ -598,9 +598,19 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114936334385757952, guid: 6fbf3fe4bbf06fb4d8ecfe644c27739c,
+        type: 2}
+      propertyPath: fadeui
+      value: 
+      objectReference: {fileID: 438538192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fbf3fe4bbf06fb4d8ecfe644c27739c, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &438538192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1789637241581598, guid: 8aebc3b5ef7eb444e8b6320a27895218,
+    type: 2}
+  m_PrefabInternal: {fileID: 2033224201}
 --- !u!1 &445329826 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1393336566814666, guid: a7ac00e10110ae840bc245bc56cf14a1,
@@ -826,6 +836,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1360477190341158, guid: a7ac00e10110ae840bc245bc56cf14a1,
     type: 2}
   m_PrefabInternal: {fileID: 114042723}
+--- !u!1 &965542908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1602892903240192, guid: bb6664ec3016b4f4e8e779966d4c28d6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1370723481}
 --- !u!1 &1139539550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358644862770578, guid: a7ac00e10110ae840bc245bc56cf14a1,
@@ -969,6 +984,7 @@ MonoBehaviour:
   WaterRune: {fileID: 531702990}
   FireRune: {fileID: 882390696}
   AirRune: {fileID: 233859839}
+  PlayerRef: {fileID: 965542908}
 --- !u!1 &1354795012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1737875532054026, guid: bb6664ec3016b4f4e8e779966d4c28d6,
@@ -1478,7 +1494,7 @@ Prefab:
     - target: {fileID: 224957967543147346, guid: 8aebc3b5ef7eb444e8b6320a27895218,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.81173134
+      value: 0.8117466
       objectReference: {fileID: 0}
     - target: {fileID: 224957967543147346, guid: 8aebc3b5ef7eb444e8b6320a27895218,
         type: 2}
