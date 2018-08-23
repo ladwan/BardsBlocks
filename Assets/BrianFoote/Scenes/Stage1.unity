@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &29423786 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1094183380880366, guid: 8aebc3b5ef7eb444e8b6320a27895218,
+    type: 2}
+  m_PrefabInternal: {fileID: 2033224201}
 --- !u!1001 &114042723
 Prefab:
   m_ObjectHideFlags: 0
@@ -453,6 +458,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &233859839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1734239678404228, guid: a7ac00e10110ae840bc245bc56cf14a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 114042723}
+--- !u!1 &251669054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603744558659514, guid: 8aebc3b5ef7eb444e8b6320a27895218,
+    type: 2}
+  m_PrefabInternal: {fileID: 2033224201}
 --- !u!1 &433413674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1617748276273130, guid: a7ac00e10110ae840bc245bc56cf14a1,
@@ -614,6 +629,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &531702990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1463584604865928, guid: a7ac00e10110ae840bc245bc56cf14a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 114042723}
 --- !u!1001 &542012158
 Prefab:
   m_ObjectHideFlags: 0
@@ -801,6 +821,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &882390696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1360477190341158, guid: a7ac00e10110ae840bc245bc56cf14a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 114042723}
 --- !u!1 &1139539550 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358644862770578, guid: a7ac00e10110ae840bc245bc56cf14a1,
@@ -829,6 +854,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1267973119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1281501013235736, guid: 8aebc3b5ef7eb444e8b6320a27895218,
+    type: 2}
+  m_PrefabInternal: {fileID: 2033224201}
 --- !u!1 &1318553576
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +871,7 @@ GameObject:
   - component: {fileID: 1318553580}
   - component: {fileID: 1318553579}
   - component: {fileID: 1318553578}
+  - component: {fileID: 1318553581}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -919,6 +950,25 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1318553581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1318553576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78260ee7cd28db44fb5b926dd2b110fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rune1: {fileID: 1503278178}
+  Rune2: {fileID: 251669054}
+  Rune3: {fileID: 29423786}
+  Rune4: {fileID: 1472995374}
+  Rune5: {fileID: 1267973119}
+  WaterRune: {fileID: 531702990}
+  FireRune: {fileID: 882390696}
+  AirRune: {fileID: 233859839}
 --- !u!1 &1354795012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1737875532054026, guid: bb6664ec3016b4f4e8e779966d4c28d6,
@@ -1036,6 +1086,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1772488781351204, guid: bb6664ec3016b4f4e8e779966d4c28d6,
     type: 2}
   m_PrefabInternal: {fileID: 1370723481}
+--- !u!1 &1472995374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1195212714058394, guid: 8aebc3b5ef7eb444e8b6320a27895218,
+    type: 2}
+  m_PrefabInternal: {fileID: 2033224201}
+--- !u!1 &1503278178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1485332939345424, guid: 8aebc3b5ef7eb444e8b6320a27895218,
+    type: 2}
+  m_PrefabInternal: {fileID: 2033224201}
 --- !u!1001 &1692409620
 Prefab:
   m_ObjectHideFlags: 0
@@ -1418,7 +1478,7 @@ Prefab:
     - target: {fileID: 224957967543147346, guid: 8aebc3b5ef7eb444e8b6320a27895218,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.8117523
+      value: 0.81173134
       objectReference: {fileID: 0}
     - target: {fileID: 224957967543147346, guid: 8aebc3b5ef7eb444e8b6320a27895218,
         type: 2}
