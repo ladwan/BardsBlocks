@@ -22,11 +22,12 @@ public class RuneScript : MonoBehaviour {
             Rune2.GetComponent<Button>().enabled = false;
             Rune5.GetComponent<Button>().enabled = false;
 
-
+            
         }
         StartCoroutine(SongOrder());
     }
-	
+
+
     IEnumerator SongOrder()
     {
         yield return new WaitForSeconds(2);
@@ -47,18 +48,18 @@ public class RuneScript : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        if (RunesCollected == 0 && PlayerRef.transform.position.x == WaterRune.transform.position.x)
+        if (RunesCollected == 0 && PlayerRef.transform.position.x == WaterRune.transform.position.x && PlayerRef.transform.position.z == WaterRune.transform.position.z)
         {
             Rune5.GetComponent<Button>().enabled = true;
             RunesCollected++;
         }
-        if (RunesCollected == 1 && PlayerRef.transform.position.x == FireRune.transform.position.x)
+        if (RunesCollected == 1 && PlayerRef.transform.position.x == FireRune.transform.position.x && PlayerRef.transform.position.z == FireRune.transform.position.z)
         {
             Rune2.GetComponent<Button>().enabled = true;
             RunesCollected++;
         }
 
-        if (RunesCollected == 2 && PlayerRef.transform.position.x == AirRune.transform.position.x)
+        if (RunesCollected == 2 && PlayerRef.transform.position.x == AirRune.transform.position.x && PlayerRef.transform.position.z == AirRune.transform.position.z)
         {
             Rune1.GetComponent<Button>().enabled = true;
             RunesCollected = 0;

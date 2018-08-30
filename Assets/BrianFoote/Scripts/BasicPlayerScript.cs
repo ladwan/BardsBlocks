@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BasicPlayerScript : MonoBehaviour {
 
@@ -25,10 +26,18 @@ public class BasicPlayerScript : MonoBehaviour {
     public int powerUpPickNumber;
 
     public bool canDoubleJump;
-    public GameObject canDoubleJumpMark;
-    public bool canProtect;
-    public GameObject canProtectMark;
+    public GameObject doubleJumpButton;
+	public bool doubleJumpActive;
+	public GameObject doubleJumpActiveIndic;
+    public Sprite doubleJumpPotionFull;
+    public Sprite doubleJumpPotionEmpty;
 
+    public bool canProtect;
+    public GameObject protectButton;
+	public bool protectActive;
+	public GameObject protectActiveIndic;
+    public Sprite protectPotionFull;
+    public Sprite protectPotionEmpty;
 
 
     public Animator A1, A2, B1, B3, C3;
@@ -73,13 +82,14 @@ public class BasicPlayerScript : MonoBehaviour {
         if (doubleJumpUseCount >= 1)
         {
             canDoubleJump = true;
-            canDoubleJumpMark.SetActive(true);
-        }
+			doubleJumpButton.GetComponent<Image>().sprite = doubleJumpPotionFull;
+			doubleJumpButton.GetComponent<BoxCollider2D> ().enabled = true;        }
 
         if (doubleJumpUseCount == 0)
         {
             canDoubleJump = false;
-            canDoubleJumpMark.SetActive(false);
+			doubleJumpButton.GetComponent<Image>().sprite = doubleJumpPotionEmpty;
+			doubleJumpButton.GetComponent<BoxCollider2D> ().enabled = false;
         }
 
         if (doubleJumpUseCount > doubleJumpUseMax)
@@ -90,19 +100,37 @@ public class BasicPlayerScript : MonoBehaviour {
         if (protectUseCount >= 1)
         {
             canProtect = true;
-            canProtectMark.SetActive(true);
-        }
+			protectButton.GetComponent<Image>().sprite = protectPotionFull;
+			protectButton.GetComponent<BoxCollider2D> ().enabled = true; 
+		}
 
         if (protectUseCount == 0)
         {
             canProtect = false;
-            canProtectMark.SetActive(false);
-        }
+			protectButton.GetComponent<Image>().sprite = protectPotionEmpty;
+			protectButton.GetComponent<BoxCollider2D> ().enabled = false;        
+		}
 
         if (protectUseCount > protectUseMax)
         {
             protectUseCount = protectUseMax;
         }
+
+		if (doubleJumpActive == true) {
+			doubleJumpActiveIndic.SetActive (true);
+		}
+
+		if (doubleJumpActive == false) {
+			doubleJumpActiveIndic.SetActive (false);
+		}
+
+		if (protectActive == true) {
+			protectActiveIndic.SetActive (true);
+		}
+		if (protectActive == false) {
+			protectActiveIndic.SetActive (false);
+		}
+				
 //
 //        if (powerUpScore >= powerUpScoreThresh) 
 //		{
@@ -115,7 +143,7 @@ public class BasicPlayerScript : MonoBehaviour {
 
 		gameObject.transform.position = new Vector3 (currentBlock.position.x, 1.6f, currentBlock.position.z);
 
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0) && doubleJumpActive == false && protectActive == false) {
 
 			RaycastHit hit;
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
@@ -137,7 +165,7 @@ public class BasicPlayerScript : MonoBehaviour {
             
         }
 
-        if (Input.GetMouseButtonDown(1))
+		if (Input.GetMouseButtonDown(0) && doubleJumpActive == true && protectActive == false)
         {
 
             RaycastHit hit;
@@ -160,13 +188,14 @@ public class BasicPlayerScript : MonoBehaviour {
                     JumpSpace();
                     doubleJumpUseCount -= 1;
                     //farJumpActive = false;
+					doubleJumpActive = false;
                 }
 
                 
             }
         }
 
-        if (Input.GetMouseButtonDown(2))
+		if (Input.GetMouseButtonDown(0) && doubleJumpActive == false && protectActive == true)
         {
 
             RaycastHit hit;
@@ -181,6 +210,7 @@ public class BasicPlayerScript : MonoBehaviour {
                 {
                     currentBlock.GetComponent<BasicBlockScript>().isProtected = true;
                     protectUseCount -= 1;
+					protectActive = false;
                 }
             }
         }
@@ -235,6 +265,27 @@ public class BasicPlayerScript : MonoBehaviour {
         }
         
     }
+
+	public void ActivateDoubleJump(){
+		protectActive = false;
+		if (doubleJumpActive == true) {
+			doubleJumpActive = false;
+		} 
+		else
+		doubleJumpActive = true;
+
+	}
+
+	public void ActivateProtect(){
+		doubleJumpActive = false;
+		if (protectActive == true) {
+			protectActive = false;
+		} 
+		else
+		protectActive = true;
+
+		
+	}
 
 
 }

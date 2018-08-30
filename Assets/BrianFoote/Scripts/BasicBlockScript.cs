@@ -53,8 +53,7 @@ public class BasicBlockScript : MonoBehaviour {
         {
             defaultGlow.enableEmission = false;
         }
-        
-    
+
         playerRef = GameObject.FindGameObjectWithTag("Player");
         stageRef = GameObject.FindGameObjectWithTag("StageReference");
 
