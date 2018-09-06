@@ -10,7 +10,7 @@ public class UiFade : MonoBehaviour
 
     private void Start()
     {
-        Fade = GetComponent<Animator>();
+        //Fade = GetComponent<Animator>();
     }
 
 
