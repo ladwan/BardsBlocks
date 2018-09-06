@@ -71,16 +71,19 @@ public class RuneScript : MonoBehaviour {
         {
             Rune5.GetComponent<Button>().enabled = true;
             RunesCollected++;
+            WaterParticle.SetActive(false);
         }
         if (RunesCollected == 1 && PlayerRef.transform.position.x == FireRune.transform.position.x && PlayerRef.transform.position.z == FireRune.transform.position.z)
         {
             Rune2.GetComponent<Button>().enabled = true;
             RunesCollected++;
+            FireParticle.SetActive(false);
         }
 
         if (RunesCollected == 2 && PlayerRef.transform.position.x == AirRune.transform.position.x && PlayerRef.transform.position.z == AirRune.transform.position.z)
         {
             Rune1.GetComponent<Button>().enabled = true;
+            ArrowParticle.SetActive(false);
             RunesCollected = 0;
             CurrentStage = 2;
         }
