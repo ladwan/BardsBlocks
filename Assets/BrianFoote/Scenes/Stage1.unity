@@ -10798,16 +10798,21 @@ Prefab:
         type: 3}
     - target: {fileID: 4885088032309590, guid: bb6664ec3016b4f4e8e779966d4c28d6, type: 2}
       propertyPath: m_LocalScale.x
-      value: 28
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4885088032309590, guid: bb6664ec3016b4f4e8e779966d4c28d6, type: 2}
       propertyPath: m_LocalScale.y
-      value: 28
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4885088032309590, guid: bb6664ec3016b4f4e8e779966d4c28d6, type: 2}
       propertyPath: m_LocalScale.z
-      value: 28
+      value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 33640709003017294, guid: bb6664ec3016b4f4e8e779966d4c28d6,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 8f18fd019bec97f6a6793ad7e4ae94d2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb6664ec3016b4f4e8e779966d4c28d6, type: 2}
   m_IsPrefabAsset: 0
