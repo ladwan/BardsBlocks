@@ -10,9 +10,12 @@ public class RuneScript : MonoBehaviour {
     Transform CurrentBlockREF,REFtransform;
     public GameObject WaterRune, FireRune, AirRune;
     public GameObject PlayerRef;
-    
-	// Use this for initialization
-	void Start () {
+    public AudioClip Note1, Note2, Note3, Note4, Note5;
+    public AudioSource SoundsSource;
+    public ParticleSystem RuneGlow1, RuneGlow2, RuneGlow3, RuneGlow4, RuneGlow5;
+    public bool isglowing;
+    // Use this for initialization
+    void Start () {
         if (CurrentStage == 1)
         {
             Rune3.SetActive(false);
@@ -32,13 +35,26 @@ public class RuneScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
         Rune5.GetComponent<Button>().enabled = true;
+        SoundsSource.PlayOneShot(Note3);
+        var glow = RuneGlow1.emission;
+        glow.enabled = isglowing;
+     
+
         yield return new WaitForSeconds(1);
+
         Rune2.GetComponent<Button>().enabled = true;
         Rune5.GetComponent<Button>().enabled = false;
-        yield return new WaitForSeconds(1);
+        SoundsSource.PlayOneShot(Note5);
+
+        yield return new WaitForSeconds(1.2f);
+
         Rune1.GetComponent<Button>().enabled = true;
         Rune2.GetComponent<Button>().enabled = false;
+        SoundsSource.PlayOneShot(Note4);
+
+
         yield return new WaitForSeconds(1);
+
         Rune1.GetComponent<Button>().enabled = false;
   
 
