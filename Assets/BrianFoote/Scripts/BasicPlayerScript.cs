@@ -61,7 +61,6 @@ public class BasicPlayerScript : MonoBehaviour {
         if (pauseMenu.GetComponent<PauseScript>().isPaused == false)
         {
 
-            Debug.Log("Step0.1");
             if (currentBlock == BlockA1)
             {
                 A1.SetTrigger("A1");
@@ -83,21 +82,17 @@ public class BasicPlayerScript : MonoBehaviour {
                 C3.SetTrigger("C3");
             }
 
-            Debug.Log("Step0.2");
 
             //		scoreReference = GameObject.FindGameObjectWithTag ("ScoreReference");
 
             if (doubleJumpUseCount >= 1)
             {
-                Debug.Log("Step0.21");
+
                 canDoubleJump = true;
-                Debug.Log("Step0.22");
                 doubleJumpButton.GetComponent<Image>().sprite = doubleJumpPotionFull;
-                Debug.Log("Step0.23");
                 doubleJumpButton.GetComponent<BoxCollider2D>().enabled = true;
             }
 
-            Debug.Log("Step0.3");
             if (doubleJumpUseCount == 0)
             {
                 canDoubleJump = false;
@@ -156,11 +151,8 @@ public class BasicPlayerScript : MonoBehaviour {
             //            protectUseCount += 1;
             //		}
 
-            Debug.Log("Step1");
             currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
-            Debug.Log("Step2");
             gameObject.transform.position = new Vector3(currentBlock.position.x, 1.6f, currentBlock.position.z);
-            Debug.Log("Step3");
             if (Input.GetMouseButtonDown(0) && doubleJumpActive == false && protectActive == false)
             {
 

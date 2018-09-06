@@ -33,7 +33,6 @@ public class CameraRotationScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
 
 
     }
@@ -41,6 +40,8 @@ public class CameraRotationScript : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
 
         if (pauseMenu.GetComponent<PauseScript>().isPaused == false)
         {

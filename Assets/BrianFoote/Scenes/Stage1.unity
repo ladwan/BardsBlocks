@@ -6809,11 +6809,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e17711ec2be1487adc509a686631d19, type: 3}
   m_IsPrefabAsset: 0
---- !u!1 &578187083 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1611829124754856, guid: 11a663358391a5940aaf3f6de6cf646c,
-    type: 2}
-  m_PrefabInternal: {fileID: 542012158}
 --- !u!1001 &593852910
 Prefab:
   m_ObjectHideFlags: 0
@@ -7419,7 +7414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4a23f01e3327a8449105059f18816a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeui: {fileID: 1505628892}
+  fadeui: {fileID: 1452808634}
   scrollbody: {fileID: 212639104}
   scrollbottom: {fileID: 299347424}
 --- !u!114 &632115999
@@ -10518,13 +10513,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oneStar: 0
   oneStarThresh: 0
-  star1: {fileID: 1123009681}
+  star1: {fileID: 1852584447}
   twoStar: 0
   twoStarThresh: 2000
-  star2: {fileID: 1884675867}
+  star2: {fileID: 2104289115}
   threeStar: 0
   threeStarThresh: 2500
-  star3: {fileID: 578187083}
+  star3: {fileID: 857100116}
   stageScore: 0
   playerRef: {fileID: 0}
 --- !u!4 &932609238
@@ -13377,11 +13372,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1117800619}
   m_CullTransparentMesh: 0
---- !u!1 &1123009681 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1054629135680816, guid: 11a663358391a5940aaf3f6de6cf646c,
-    type: 2}
-  m_PrefabInternal: {fileID: 542012158}
 --- !u!4 &1126361995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400006, guid: 7e17711ec2be1487adc509a686631d19,
@@ -23977,11 +23967,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1882100762}
   m_CullTransparentMesh: 0
---- !u!1 &1884675867 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1538181401283032, guid: 11a663358391a5940aaf3f6de6cf646c,
-    type: 2}
-  m_PrefabInternal: {fileID: 542012158}
 --- !u!1 &1887270013
 GameObject:
   m_ObjectHideFlags: 0
@@ -25015,21 +25000,21 @@ MonoBehaviour:
   Rune3: {fileID: 901175779}
   Rune4: {fileID: 320099165}
   Rune5: {fileID: 743647431}
-  WaterRune: {fileID: 0}
-  FireRune: {fileID: 0}
-  AirRune: {fileID: 0}
-  PlayerRef: {fileID: 217878268}
-  Note1: {fileID: 0}
-  Note2: {fileID: 0}
-  WaterNote: {fileID: 0}
-  ArrowNote: {fileID: 0}
-  FireNote: {fileID: 0}
-  SoundsSource: {fileID: 0}
+  WaterRune: {fileID: 1645577422}
+  FireRune: {fileID: 2075423580}
+  AirRune: {fileID: 79771760}
+  PlayerRef: {fileID: 1687916567}
+  Note1: {fileID: 8300000, guid: c9f6a320209d42f4eadf10971b3b732f, type: 3}
+  Note2: {fileID: 8300000, guid: 1f8c64a378c1ff747bd22cef5c2df697, type: 3}
+  WaterNote: {fileID: 8300000, guid: c2de6fdfb00c8fa4eb94712028107809, type: 3}
+  ArrowNote: {fileID: 8300000, guid: 46d557089d3b0bd4a8c60498ecdf1a38, type: 3}
+  FireNote: {fileID: 8300000, guid: 3966eef6a94204846b4d780800d150a9, type: 3}
+  SoundsSource: {fileID: 1030895972}
   RuneGlow1: {fileID: 0}
   RuneGlow2: {fileID: 0}
-  WaterParticle: {fileID: 0}
-  ArrowParticle: {fileID: 0}
-  FireParticle: {fileID: 0}
+  WaterParticle: {fileID: 943740246}
+  ArrowParticle: {fileID: 128427666}
+  FireParticle: {fileID: 1336851530}
   isglowing: 0
 --- !u!20 &1969732014
 Camera:

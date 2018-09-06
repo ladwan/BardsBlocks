@@ -22680,13 +22680,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   oneStar: 0
   oneStarThresh: 0
-  star1: {fileID: 1291376264}
+  star1: {fileID: 1174445125}
   twoStar: 0
   twoStarThresh: 8000
-  star2: {fileID: 40634054}
+  star2: {fileID: 277959664}
   threeStar: 0
   threeStarThresh: 9500
-  star3: {fileID: 964461544}
+  star3: {fileID: 1330533022}
   stageScore: 0
   playerRef: {fileID: 0}
 --- !u!4 &564025204
@@ -65000,10 +65000,10 @@ MonoBehaviour:
   wantTypePurple: 0
   wantTypeCyan: 0
   currentColor: {fileID: 0}
-  gameDataReference: {fileID: 149322168}
-  stageReference: {fileID: 1291698042}
-  endScreen: {fileID: 173518729}
-  perfectText: {fileID: 1020154521}
+  gameDataReference: {fileID: 2013585567}
+  stageReference: {fileID: 564025202}
+  endScreen: {fileID: 2102054822}
+  perfectText: {fileID: 1171415725}
 --- !u!1 &1665714796
 GameObject:
   m_ObjectHideFlags: 0
