@@ -10,9 +10,9 @@ public class RuneScript : MonoBehaviour {
     Transform CurrentBlockREF,REFtransform;
     public GameObject WaterRune, FireRune, AirRune;
     public GameObject PlayerRef;
-    public AudioClip Note1, Note2, Note3, Note4, Note5;
+    public AudioClip Note1, Note2, WaterNote, ArrowNote, FireNote;
     public AudioSource SoundsSource;
-    public ParticleSystem RuneGlow1, RuneGlow2, RuneGlow3, RuneGlow4, RuneGlow5;
+    public GameObject RuneGlow1, RuneGlow2, WaterParticle, ArrowParticle, FireParticle;
     public bool isglowing;
     // Use this for initialization
     void Start () {
@@ -24,7 +24,9 @@ public class RuneScript : MonoBehaviour {
             Rune1.GetComponent<Button>().enabled = false;
             Rune2.GetComponent<Button>().enabled = false;
             Rune5.GetComponent<Button>().enabled = false;
-
+            WaterParticle.SetActive(false);
+            ArrowParticle.SetActive(false);
+            FireParticle.SetActive(false);
             
         }
         StartCoroutine(SongOrder());
@@ -35,22 +37,23 @@ public class RuneScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
         Rune5.GetComponent<Button>().enabled = true;
-        SoundsSource.PlayOneShot(Note3);
-        var glow = RuneGlow1.emission;
-        glow.enabled = isglowing;
+        SoundsSource.PlayOneShot(WaterNote);
+        WaterParticle.SetActive(true);
      
 
         yield return new WaitForSeconds(1);
 
         Rune2.GetComponent<Button>().enabled = true;
         Rune5.GetComponent<Button>().enabled = false;
-        SoundsSource.PlayOneShot(Note5);
+        SoundsSource.PlayOneShot(FireNote);
+        FireParticle.SetActive(true);
 
         yield return new WaitForSeconds(1.2f);
 
         Rune1.GetComponent<Button>().enabled = true;
         Rune2.GetComponent<Button>().enabled = false;
-        SoundsSource.PlayOneShot(Note4);
+        SoundsSource.PlayOneShot(ArrowNote);
+        ArrowParticle.SetActive(true);
 
 
         yield return new WaitForSeconds(1);
