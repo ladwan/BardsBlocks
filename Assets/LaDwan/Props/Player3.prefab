@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1859027304503048}
+  m_IsPrefabAsset: 1
+--- !u!1 &1537918038000736
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4648695458364760}
+  - component: {fileID: 33837570297933912}
+  - component: {fileID: 23833073189540228}
+  m_Layer: 0
+  m_Name: Bard:Merged_PM3D_Sphere3D2_1_Merged_PM3D_Sphere3D2_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1859027304503048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4710707657315778}
+  - component: {fileID: 114111434019230842}
+  m_Layer: 0
+  m_Name: Player3
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4648695458364760
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537918038000736}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4710707657315778}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4710707657315778
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1859027304503048}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.6075277, y: 3.31, z: 0.80419874}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
+  m_Children:
+  - {fileID: 4648695458364760}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &23833073189540228
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537918038000736}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: e99dfe2c3e320ab4997429abf75cb48b, type: 3}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &33837570297933912
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537918038000736}
+  m_Mesh: {fileID: 4300000, guid: e99dfe2c3e320ab4997429abf75cb48b, type: 3}
+--- !u!114 &114111434019230842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1859027304503048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc514541d34a32f45b9539480210af75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreReference: {fileID: 0}
+  currentBlock: {fileID: 0}
+  camHolder: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  playerScore: 0
+  powerUpScore: 0
+  powerUpScoreThresh: 1000
+  doubleJumpUseCount: 0
+  doubleJumpUseMax: 1
+  protectUseCount: 0
+  protectUseMax: 1
+  powerUpPickNumber: 0
+  canDoubleJump: 0
+  doubleJumpButton: {fileID: 0}
+  doubleJumpActive: 0
+  doubleJumpActiveIndic: {fileID: 0}
+  doubleJumpPotionFull: {fileID: 21300000, guid: 41c4d87e64541b842b08da89b1c64116,
+    type: 3}
+  doubleJumpPotionEmpty: {fileID: 21300000, guid: 09615314fc461004b911a706e917e9d9,
+    type: 3}
+  canProtect: 0
+  protectButton: {fileID: 0}
+  protectActive: 0
+  protectActiveIndic: {fileID: 0}
+  protectPotionFull: {fileID: 21300000, guid: df3788945d10bb343878a5fa9461f0d2, type: 3}
+  protectPotionEmpty: {fileID: 21300000, guid: 29d1c0eb0bcc1a448b73f1a8e4f1df27, type: 3}
+  A1: {fileID: 0}
+  A2: {fileID: 0}
+  B1: {fileID: 0}
+  B3: {fileID: 0}
+  C3: {fileID: 0}
+  BlockA1: {fileID: 0}
+  BlockA2: {fileID: 0}
+  BlockB1: {fileID: 0}
+  BlockB3: {fileID: 0}
+  BlockC3: {fileID: 0}

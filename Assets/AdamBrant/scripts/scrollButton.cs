@@ -17,6 +17,8 @@ public class scrollButton : MonoBehaviour
     {
         Scrollbottom = scrollbottom.GetComponent<Animator>();
         Scrollbody = scrollbody.GetComponent<Animator>();
+        buttonanimate();
+        GetComponent<UiFade>().toggleUI();
         fadeui.SetActive(false);
     }
     public void buttonanimate()

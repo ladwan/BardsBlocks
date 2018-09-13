@@ -18,7 +18,7 @@ public class LoadingScreenScript : MonoBehaviour {
 	}
     IEnumerator Load()
     {
-        yield return new WaitForSecondsRealtime(2);
+        yield return new WaitForSecondsRealtime(4);
         SceneManager.LoadScene(scencetoload);
 
     }

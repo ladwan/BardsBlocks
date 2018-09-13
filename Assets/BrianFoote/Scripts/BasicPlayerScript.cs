@@ -58,7 +58,7 @@ public class BasicPlayerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (pauseMenu.GetComponent<PauseScript>().isPaused == false)
+        if (pauseMenu.GetComponent<PauseScript>().isPaused == false && camHolder.GetComponent<CameraRotationScript>().canDrag == false)
         {
 
             if (currentBlock == BlockA1)
