@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: bdb24151bc218704e8ee5347ab54b677
+=======
+guid: b93ebb680d83b9f47b6e16447da2d56d
+>>>>>>> LaDwan
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
