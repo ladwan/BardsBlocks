@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: 15a95bd02ec69ae4cb3cf148793d2710
-=======
-guid: d9438018a0cec8a4b8b08f4fb3e23412
->>>>>>> LaDwan
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -11,11 +7,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-<<<<<<< HEAD
-    sRGBTexture: 1
-=======
     sRGBTexture: 0
->>>>>>> LaDwan
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -59,11 +51,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-<<<<<<< HEAD
-  textureType: 0
-=======
   textureType: 1
->>>>>>> LaDwan
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
