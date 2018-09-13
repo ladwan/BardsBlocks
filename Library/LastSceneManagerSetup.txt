@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BrianFoote/Scenes/Stage1.unity
+- path: Assets/BrianFoote/Scenes/Stage4.unity
   isLoaded: 1
   isActive: 1

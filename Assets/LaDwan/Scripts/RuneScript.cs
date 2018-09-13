@@ -10,9 +10,12 @@ public class RuneScript : MonoBehaviour {
     Transform CurrentBlockREF,REFtransform;
     public GameObject WaterRune, FireRune, AirRune;
     public GameObject PlayerRef;
-    
-	// Use this for initialization
-	void Start () {
+    public AudioClip Note1, Note2, WaterNote, ArrowNote, FireNote;
+    public AudioSource SoundsSource;
+    public GameObject RuneGlow1, RuneGlow2, WaterParticle, ArrowParticle, FireParticle;
+    public bool isglowing;
+    // Use this for initialization
+    void Start () {
         if (CurrentStage == 1)
         {
             Rune3.SetActive(false);
@@ -21,7 +24,9 @@ public class RuneScript : MonoBehaviour {
             Rune1.GetComponent<Button>().enabled = false;
             Rune2.GetComponent<Button>().enabled = false;
             Rune5.GetComponent<Button>().enabled = false;
-
+            WaterParticle.SetActive(false);
+            ArrowParticle.SetActive(false);
+            FireParticle.SetActive(false);
             
         }
         StartCoroutine(SongOrder());
@@ -32,13 +37,27 @@ public class RuneScript : MonoBehaviour {
     {
         yield return new WaitForSeconds(2);
         Rune5.GetComponent<Button>().enabled = true;
+        SoundsSource.PlayOneShot(WaterNote);
+        WaterParticle.SetActive(true);
+     
+
         yield return new WaitForSeconds(1);
+
         Rune2.GetComponent<Button>().enabled = true;
         Rune5.GetComponent<Button>().enabled = false;
-        yield return new WaitForSeconds(1);
+        SoundsSource.PlayOneShot(FireNote);
+        FireParticle.SetActive(true);
+
+        yield return new WaitForSeconds(1.2f);
+
         Rune1.GetComponent<Button>().enabled = true;
         Rune2.GetComponent<Button>().enabled = false;
+        SoundsSource.PlayOneShot(ArrowNote);
+        ArrowParticle.SetActive(true);
+
+
         yield return new WaitForSeconds(1);
+
         Rune1.GetComponent<Button>().enabled = false;
   
 
@@ -52,16 +71,19 @@ public class RuneScript : MonoBehaviour {
         {
             Rune5.GetComponent<Button>().enabled = true;
             RunesCollected++;
+            WaterParticle.SetActive(false);
         }
         if (RunesCollected == 1 && PlayerRef.transform.position.x == FireRune.transform.position.x && PlayerRef.transform.position.z == FireRune.transform.position.z)
         {
             Rune2.GetComponent<Button>().enabled = true;
             RunesCollected++;
+            FireParticle.SetActive(false);
         }
 
         if (RunesCollected == 2 && PlayerRef.transform.position.x == AirRune.transform.position.x && PlayerRef.transform.position.z == AirRune.transform.position.z)
         {
             Rune1.GetComponent<Button>().enabled = true;
+            ArrowParticle.SetActive(false);
             RunesCollected = 0;
             CurrentStage = 2;
         }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraRotationScript : MonoBehaviour {
-
     public Rigidbody myRigidbody;
 
     public Camera mainCam;
@@ -32,18 +31,21 @@ public class CameraRotationScript : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+    void Start()
+    {
 
 
     }
 
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
+        pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
 
         if (pauseMenu.GetComponent<PauseScript>().isPaused == false)
         {
-            
+
             mainCam.transform.LookAt(gameObject.transform);
 
             if (Input.GetMouseButtonDown(0) && canDrag == true)

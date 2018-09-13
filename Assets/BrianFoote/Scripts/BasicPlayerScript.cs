@@ -13,7 +13,6 @@ public class BasicPlayerScript : MonoBehaviour {
 
     public GameObject pauseMenu;
 
-
     public float playerScore;
 
 	public float powerUpScore;
@@ -49,7 +48,9 @@ public class BasicPlayerScript : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+
 
     }
 
@@ -57,7 +58,7 @@ public class BasicPlayerScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (pauseMenu.GetComponent<PauseScript>().isPaused == false)
+        if (pauseMenu.GetComponent<PauseScript>().isPaused == false && camHolder.GetComponent<CameraRotationScript>().canDrag == false)
         {
 
             if (currentBlock == BlockA1)
@@ -86,6 +87,7 @@ public class BasicPlayerScript : MonoBehaviour {
 
             if (doubleJumpUseCount >= 1)
             {
+
                 canDoubleJump = true;
                 doubleJumpButton.GetComponent<Image>().sprite = doubleJumpPotionFull;
                 doubleJumpButton.GetComponent<BoxCollider2D>().enabled = true;
@@ -150,87 +152,83 @@ public class BasicPlayerScript : MonoBehaviour {
             //		}
 
             currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
-
-            if (camHolder.GetComponent<CameraRotationScript>().canDrag == false)
+            gameObject.transform.position = new Vector3(currentBlock.position.x, 1.6f, currentBlock.position.z);
+            if (Input.GetMouseButtonDown(0) && doubleJumpActive == false && protectActive == false)
             {
-                gameObject.transform.position = new Vector3(currentBlock.position.x, 1.6f, currentBlock.position.z);
 
-                if (Input.GetMouseButtonDown(0) && doubleJumpActive == false && protectActive == false)
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit, 100.0f))
                 {
-
-                    RaycastHit hit;
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                    if (Physics.Raycast(ray, out hit, 100.0f))
+                    if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().northBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().eastBlock ||
+                        hit.transform == currentBlock.GetComponent<BasicBlockScript>().southBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().westBlock)
                     {
-                        if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().northBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().eastBlock ||
-                            hit.transform == currentBlock.GetComponent<BasicBlockScript>().southBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().westBlock)
+                        //					Debug.Log (hit.transform.gameObject);
+                        currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = false;
+                        currentBlock = hit.transform;
+                        currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
+                        if (currentBlock.GetComponent<BasicBlockScript>().isProtected == true)
                         {
-                            //					Debug.Log (hit.transform.gameObject);
-                            currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = false;
-                            currentBlock = hit.transform;
-                            currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
-                            if (currentBlock.GetComponent<BasicBlockScript>().isProtected == true)
-                            {
-                                currentBlock.GetComponent<BasicBlockScript>().isProtected = false;
-                            }
-                            JumpSpace();
+                            currentBlock.GetComponent<BasicBlockScript>().isProtected = false;
                         }
-                    }
-
-                }
-
-                if (Input.GetMouseButtonDown(0) && doubleJumpActive == true && protectActive == false)
-                {
-
-                    RaycastHit hit;
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-
-                    if (Physics.Raycast(ray, out hit, 100.0f) && canDoubleJump == true)
-                    {
-                        if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().farNorthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farEastBlock ||
-                            hit.transform == currentBlock.GetComponent<BasicBlockScript>().farSouthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farWestBlock)
-                        {
-                            //                    Debug.Log(hit.transform.gameObject);
-                            currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = false;
-                            currentBlock = hit.transform;
-                            currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
-                            if (currentBlock.GetComponent<BasicBlockScript>().isProtected == true)
-                            {
-                                currentBlock.GetComponent<BasicBlockScript>().isProtected = false;
-                            }
-                            JumpSpace();
-                            doubleJumpUseCount -= 1;
-                            //farJumpActive = false;
-                            doubleJumpActive = false;
-                        }
-
-
+                        JumpSpace();
                     }
                 }
 
-                if (Input.GetMouseButtonDown(0) && doubleJumpActive == false && protectActive == true)
+            }
+
+            if (Input.GetMouseButtonDown(0) && doubleJumpActive == true && protectActive == false)
+            {
+
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+                if (Physics.Raycast(ray, out hit, 100.0f) && canDoubleJump == true)
+                {
+                    if (hit.transform == currentBlock.GetComponent<BasicBlockScript>().farNorthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farEastBlock ||
+                        hit.transform == currentBlock.GetComponent<BasicBlockScript>().farSouthBlock || hit.transform == currentBlock.GetComponent<BasicBlockScript>().farWestBlock)
+                    {
+                        //                    Debug.Log(hit.transform.gameObject);
+                        currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = false;
+                        currentBlock = hit.transform;
+                        currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
+                        if (currentBlock.GetComponent<BasicBlockScript>().isProtected == true)
+                        {
+                            currentBlock.GetComponent<BasicBlockScript>().isProtected = false;
+                        }
+                        JumpSpace();
+                        doubleJumpUseCount -= 1;
+                        //farJumpActive = false;
+                        doubleJumpActive = false;
+                    }
+
+
+                }
+            }
+
+            if (Input.GetMouseButtonDown(0) && doubleJumpActive == false && protectActive == true)
+            {
+
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+
+                if (Physics.Raycast(ray, out hit, 100.0f) && canProtect == true)
                 {
 
-                    RaycastHit hit;
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-
-                    if (Physics.Raycast(ray, out hit, 100.0f) && canProtect == true)
+                    if (hit.transform == currentBlock && canProtect == true && currentBlock.GetComponent<BasicBlockScript>().isProtected == false && currentBlock.GetComponent<BasicBlockScript>().destroyOnJump == true)
                     {
-
-
-                        if (hit.transform == currentBlock && canProtect == true && currentBlock.GetComponent<BasicBlockScript>().isProtected == false && currentBlock.GetComponent<BasicBlockScript>().destroyOnJump == true)
-                        {
-                            currentBlock.GetComponent<BasicBlockScript>().isProtected = true;
-                            protectUseCount -= 1;
-                            protectActive = false;
-                        }
+                        currentBlock.GetComponent<BasicBlockScript>().isProtected = true;
+                        protectUseCount -= 1;
+                        protectActive = false;
                     }
                 }
             }
         }
+
     }
 
 	void JumpSpace(){
@@ -300,5 +298,8 @@ public class BasicPlayerScript : MonoBehaviour {
 		else
 		protectActive = true;
 
-		}
+		
 	}
+
+
+}

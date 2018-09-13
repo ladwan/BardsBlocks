@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1968399425212846}
+  m_IsPrefabAsset: 1
+--- !u!1 &1968399425212846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4968484982189792}
+  - component: {fileID: 20119435531664336}
+  - component: {fileID: 114918660544087724}
+  - component: {fileID: 124959530117270274}
+  - component: {fileID: 81530165801352978}
+  m_Layer: 0
+  m_Name: Main CameraLVL3
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4968484982189792
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968399425212846}
+  m_LocalRotation: {x: 0.40444183, y: 0.25087768, z: -0.11322185, w: 0.8721628}
+  m_LocalPosition: {x: -4.45, y: 6.58, z: -4.46}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 49.666004, y: 32.318, z: 0.48100004}
+--- !u!20 &20119435531664336
+Camera:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968399425212846}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!81 &81530165801352978
+AudioListener:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968399425212846}
+  m_Enabled: 1
+--- !u!114 &114918660544087724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968399425212846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78260ee7cd28db44fb5b926dd2b110fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rune1: {fileID: 0}
+  Rune2: {fileID: 0}
+  Rune3: {fileID: 0}
+  Rune4: {fileID: 0}
+  Rune5: {fileID: 0}
+  WaterRune: {fileID: 0}
+  FireRune: {fileID: 0}
+  AirRune: {fileID: 0}
+  PlayerRef: {fileID: 0}
+  Note1: {fileID: 0}
+  Note2: {fileID: 0}
+  WaterNote: {fileID: 0}
+  ArrowNote: {fileID: 0}
+  FireNote: {fileID: 0}
+  SoundsSource: {fileID: 0}
+  RuneGlow1: {fileID: 0}
+  RuneGlow2: {fileID: 0}
+  WaterParticle: {fileID: 0}
+  ArrowParticle: {fileID: 0}
+  FireParticle: {fileID: 0}
+  isglowing: 0
+--- !u!124 &124959530117270274
+Behaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1968399425212846}
+  m_Enabled: 1
