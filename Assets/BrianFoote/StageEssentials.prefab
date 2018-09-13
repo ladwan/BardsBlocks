@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1044653997279580
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +43,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1054629135680816
 GameObject:
   m_ObjectHideFlags: 1
@@ -444,9 +444,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc0d4c47a5b72547b966a149937ebcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songOrder: []
+  songOrder:
+  - {fileID: 1227168550816710}
+  - {fileID: 1637235468320568}
+  - {fileID: 1715989774671110}
+  - {fileID: 0}
   noteNumber: 0
-  noteMax: 0
+  noteMax: 3
   nextNote: {fileID: 0}
   playerRef: {fileID: 0}
   currentBlockRef: {fileID: 0}
@@ -476,13 +480,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oneStar: 0
-  oneStarThresh: 1000
+  oneStarThresh: 0
   star1: {fileID: 1054629135680816}
   twoStar: 0
-  twoStarThresh: 3000
+  twoStarThresh: 2000
   star2: {fileID: 1538181401283032}
   threeStar: 0
-  threeStarThresh: 4000
+  threeStarThresh: 2500
   star3: {fileID: 1611829124754856}
   stageScore: 0
   playerRef: {fileID: 0}
@@ -750,7 +754,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 1
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 114516852964679804}
@@ -761,7 +765,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: 9
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
