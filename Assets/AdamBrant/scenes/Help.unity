@@ -775,27 +775,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "How to Play: tap the screen to jump over blocks\nattempt to recreate the
-    sounds you hear by jumping on note blocks in the same order\n\nGoal:\ndrop as
-    many blocks as you can, while stepping on the correct order of sounds. try to
-    get a 3 star level rating!\n\nPowers: \nthe potions fill randomly after completing
-    any stage with 3 stars. after obtaining a powerup potion, you may use it one time
-    during the current stage.\n\nRed Potion:\njump two spaces instead of only one
-    space.\n\nPurple Potion:\nprotect the current destructable block from being destroyed
-    for one jump. \nexample of this would be block A and B can be destroyed, you are
-    on block A with protect active, you jump to block B, block A will still be there!
-    jump back on block A again to disable protect, and it becomes a regular destructable
-    block again.\n\nHow to Use the Interface:\nthe scroll on the left hand side shows
-    and hides the buttons and icons. Tap it to see the stage info, and powerups. Tap
-    the top of the scroll again to hide it.\n\nHow to Use a Powerup:\nwhen you want
-    to use a powerup you have earned by 3 starring any level, you can tap the scroll
-    to show the potion bottles. hold your finger on the bottle and swipe your finger
-    to the color potion you want to use. the power will now activate. \nUsing Protect:\nonce
-    protect is active, you must tap the block you are standing on to give it protect.\nUsing
-    Double Jump:\nonce you activate double jump, you can simply tap on a block 2 spaces
-    away one time to jump to it. lasts one time.\n\nYou may have both potions stored
-    at any time. If you 3 star a stage, you randomly obtain one, but if you 3 star
-    another you are garunteed the second power as long as you haven't spent the first."
+  m_Text: "How to Play:\nTap the screen to jump over blocks.\nAttempt to recreate
+    the sounds you hear by jumping on note blocks in the same order.\n\nGoal:\nDestroy
+    as many blocks as you can, while stepping on the correct order of sounds. Try
+    to get a 3 star level rating!\n\nPowers: \nThe potions fill randomly after completing
+    any stage with 3 stars. After obtaining a powerup potion, you may use it one time
+    during the current stage.\n\nRed Potion:\nJump two spaces instead of only one
+    space.\n\nPurple Potion:\nProtect the current destructable block from being destroyed
+    for one jump. \n\nHow to Use the Interface:\nThe scroll on the left hand side
+    shows and hides the buttons and icons. Tap it to see the stage info, and powerups.
+    Tap the top of the scroll again to hide it.\n\nHow to Use a Powerup:\nWhen you
+    want to use a powerup you have earned by 3 starring any level, you can tap the
+    scroll to show the potion bottles. Hold your finger on the bottle and swipe your
+    finger to the color potion you want to use. the power will now activate. \n\nUsing
+    Protect:\nOnce protect is active, you must tap the block you are standing on to
+    give it protect.\n\nUsing Double Jump:\nOnce you activate double jump, you can
+    simply tap on a block 2 spaces away one time to jump to it. Lasts one time.\n\nYou
+    may have both potions stored at any time. If you 3 star a stage, you randomly
+    obtain one, but if you 3 star another you are garunteed the second power as long
+    as you haven't spent the first."
 --- !u!222 &1133815040
 CanvasRenderer:
   m_ObjectHideFlags: 0
