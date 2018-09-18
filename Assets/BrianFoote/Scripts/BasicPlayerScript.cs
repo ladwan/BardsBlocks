@@ -152,7 +152,7 @@ public class BasicPlayerScript : MonoBehaviour {
             //		}
 
             currentBlock.GetComponent<BasicBlockScript>().isCurrentBlock = true;
-            gameObject.transform.position = new Vector3(currentBlock.position.x, 2f, currentBlock.position.z);
+            gameObject.transform.position = new Vector3(currentBlock.position.x, 1.7f, currentBlock.position.z);
             if (Input.GetMouseButtonDown(0) && doubleJumpActive == false && protectActive == false)
             {
 
