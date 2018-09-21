@@ -8,11 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: TableTop_low_defaultMat_AlbedoTransparency
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-<<<<<<< HEAD
-  m_ShaderKeywords: 
-=======
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP
->>>>>>> LaDwan
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -23,11 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-<<<<<<< HEAD
-        m_Texture: {fileID: 0}
-=======
         m_Texture: {fileID: 2800000, guid: d9438018a0cec8a4b8b08f4fb3e23412, type: 3}
->>>>>>> LaDwan
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -47,19 +39,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<< HEAD
-        m_Texture: {fileID: 2800000, guid: 1fba2dcaca707db4098ecb39e46b5f8d, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
-=======
         m_Texture: {fileID: 2800000, guid: 711983b5eefaa03408c8c4ea410571b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: b93ebb680d83b9f47b6e16447da2d56d, type: 3}
->>>>>>> LaDwan
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -75,11 +59,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-<<<<<<< HEAD
-    - _GlossMapScale: 1
-=======
     - _GlossMapScale: 0
->>>>>>> LaDwan
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0

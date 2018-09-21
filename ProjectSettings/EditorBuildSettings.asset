@@ -32,4 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BrianFoote/Scenes/Stage3.unity
     guid: f5c14167dda60aa4db936bc38788919f
+  - enabled: 1
+    path: Assets/BrianFoote/Scenes/Stage4.unity
+    guid: 54bec11ba8b3f094a976116965f98333
+  - enabled: 1
+    path: Assets/BrianFoote/Scenes/Stage5.unity
+    guid: d8370490b7b02514ab4d2839ece2ff47
+  - enabled: 1
+    path: Assets/BrianFoote/Scenes/Stage6.unity
+    guid: 87b08c67ce687994a84ada0ac614172a
   m_configObjects: {}

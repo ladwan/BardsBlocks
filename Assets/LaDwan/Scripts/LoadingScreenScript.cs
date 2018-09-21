@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadingScreenScript : MonoBehaviour {
-    public int scencetoload;
-
+    public int scencetoload=6;
+    
+    
+    
 	// Use this for initialization
 	void Start () {
         StartCoroutine(Load());
@@ -13,12 +15,14 @@ public class LoadingScreenScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+  
 
-
+       
 	}
     IEnumerator Load()
     {
-        yield return new WaitForSecondsRealtime(4);
+
+        yield return new WaitForSecondsRealtime(5);
         SceneManager.LoadScene(scencetoload);
 
     }
